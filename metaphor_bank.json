@@ -1,0 +1,747 @@
+{
+  "version": 1,
+  "channel": "CapitalChronicles",
+  "description": "Metaphor bank for CapitalChronicles finance + history + geopolitics channel. Maps narrative themes to preferred scene types and metaphor families so scene_planner and SceneEngine can keep visuals accurate, varied and coherent over 30–60 minute jobs.",
+  "themes": {
+    "empire_cycle": {
+      "scene_type_priority": [
+        "empire_map",
+        "empire_clocks",
+        "empire_capital",
+        "battlefield",
+        "info_network"
+      ],
+      "metaphors": [
+        "territory_chipping",
+        "time_cycle",
+        "capital_city",
+        "front_line",
+        "network_nodes"
+      ],
+      "notes": "Use maps, clocks and capital-city vistas to express long-term patterns across empires without relying on modern devices or charts."
+    },
+    "rome_chapter": {
+      "scene_type_priority": [
+        "empire_capital",
+        "empire_map",
+        "battlefield"
+      ],
+      "metaphors": [
+        "capital_city",
+        "territory_chipping",
+        "front_line"
+      ],
+      "notes": "Roman Empire visuals should favor ancient architecture, stone maps, and early battlefields. No modern screens."
+    },
+    "ottoman_chapter": {
+      "scene_type_priority": [
+        "empire_capital",
+        "empire_map",
+        "holy_cities"
+      ],
+      "metaphors": [
+        "capital_city",
+        "territory_chipping",
+        "pilgrimage"
+      ],
+      "notes": "Ottoman scenes should highlight palaces, maps around Mediterranean/Middle East, and holy cities when appropriate."
+    },
+    "british_chapter": {
+      "scene_type_priority": [
+        "empire_capital",
+        "empire_map",
+        "war_map"
+      ],
+      "metaphors": [
+        "capital_city",
+        "territory_chipping",
+        "military_map"
+      ],
+      "notes": "British Empire: imperial halls, world maps with sea routes, and naval/military dominance motifs."
+    },
+    "soviet_chapter": {
+      "scene_type_priority": [
+        "empire_capital",
+        "war_map",
+        "battlefield"
+      ],
+      "metaphors": [
+        "capital_city",
+        "military_map",
+        "front_line"
+      ],
+      "notes": "Soviet visuals: Kremlin-like architecture, Eastern European maps, Cold War military presence. Avoid modern Western trading UI."
+    },
+    "us_superpower": {
+      "scene_type_priority": [
+        "empire_capital",
+        "tax_map",
+        "stock_chart",
+        "trading_hall"
+      ],
+      "metaphors": [
+        "capital_city",
+        "tax_migration",
+        "smooth_line",
+        "candles"
+      ],
+      "notes": "United States as modern superpower: Washington/NYC, US maps, trading floors and charts for financial dominance."
+    },
+    "war_and_conflict": {
+      "scene_type_priority": [
+        "battlefield",
+        "war_map",
+        "military_deployment"
+      ],
+      "metaphors": [
+        "front_line",
+        "military_map",
+        "air_power"
+      ],
+      "notes": "War themes should prefer battlefields, military maps and air power scenes; avoid generic offices or trading halls."
+    },
+    "currency_hegemony": {
+      "scene_type_priority": [
+        "currency_throne",
+        "currency_exchange",
+        "tax_map"
+      ],
+      "metaphors": [
+        "currency_throne",
+        "hands_exchange",
+        "tax_migration"
+      ],
+      "notes": "Currency dominance is best shown with throne-like setups, currency symbols, global maps and exchange scenes."
+    },
+    "trading_behaviour": {
+      "scene_type_priority": [
+        "trading_hall",
+        "stock_chart",
+        "short_sellers_win",
+        "short_sellers_lose",
+        "timing_clock",
+        "market_boardgame"
+      ],
+      "metaphors": [
+        "candles",
+        "smooth_line",
+        "celebration",
+        "squeeze",
+        "clock_chart",
+        "boardgame"
+      ],
+      "notes": "Behaviour of traders and funds: trading halls, vivid charts, timing clocks and boardgame metaphors."
+    },
+    "distributional_impact": {
+      "scene_type_priority": [
+        "who_loses_scale",
+        "retail_holding",
+        "street_level"
+      ],
+      "metaphors": [
+        "scale",
+        "household",
+        "empty_cart"
+      ],
+      "notes": "Who loses: scale scenes, stressed households and street-level views of ordinary people under pressure."
+    },
+    "tax_migration": {
+      "scene_type_priority": [
+        "tax_map",
+        "empire_map"
+      ],
+      "metaphors": [
+        "tax_migration",
+        "territory_chipping"
+      ],
+      "notes": "Tax migration: maps with arrows from high-tax to low-tax regions, money flows and state outlines."
+    },
+    "money_printing": {
+      "scene_type_priority": [
+        "money_printer",
+        "currency_generic"
+      ],
+      "metaphors": [
+        "printer",
+        "currency_flood"
+      ],
+      "notes": "Money printer: industrial presses, sheets of banknotes, or visual floods of currency."
+    },
+    "gold_store_of_value": {
+      "scene_type_priority": [
+        "gold_allocation",
+        "ERA_ANCIENT_SCENE",
+        "ERA_MEDIEVAL_SCENE"
+      ],
+      "metaphors": [
+        "gold_pie",
+        "store_of_value"
+      ],
+      "notes": "Gold: gold pie charts, vaults, and historic uses as money; keep it timeless, not digital-only."
+    },
+    "quality_companies": {
+      "scene_type_priority": [
+        "QUALITY_APPS_SCENE",
+        "stock_chart"
+      ],
+      "metaphors": [
+        "quality_apps",
+        "smooth_line"
+      ],
+      "notes": "Quality companies: glowing app-like icons, well-lit city streets, and stable growth lines."
+    },
+    "timing_focus": {
+      "scene_type_priority": [
+        "timing_clock",
+        "empire_clocks",
+        "ROCKET_STOCK_SCENE"
+      ],
+      "metaphors": [
+        "clock_chart",
+        "time_cycle",
+        "rocket"
+      ],
+      "notes": "Timing: use clocks merged with charts, plus occasional rockets for dramatic timing wins."
+    },
+    "holy_cities_theme": {
+      "scene_type_priority": [
+        "holy_cities",
+        "empire_map"
+      ],
+      "metaphors": [
+        "pilgrimage",
+        "territory_chipping"
+      ],
+      "notes": "Holy cities: respectful cityscapes, crowds and architecture. No screens or overt finance metaphors."
+    }
+  },
+  "fallback": {
+    "scene_type_priority": [
+      "generic",
+      "stock_chart",
+      "GENERIC_SCENE"
+    ],
+    "metaphors": [
+      "macro_context",
+      "smooth_line"
+    ],
+    "notes": "Used when no specific theme matches; SceneEngine should then rely on keyword rules and generic templates."
+  }
+}
+
+{
+  "version": 2,
+  "channel": "CapitalChronicles",
+  "description": "Extremely robust metaphor bank for CapitalChronicles. Covers finance, macroeconomics, history, empires, geopolitics, markets, credit cycles, demographics, technology, energy, housing, labor and social impact. Scene planners should use this to pick consistent, varied, and semantically accurate scene types and metaphors across thousands of long-form videos.",
+  "global_scene_types": [
+    "empire_map",
+    "empire_clocks",
+    "empire_capital",
+    "battlefield",
+    "war_map",
+    "military_deployment",
+    "info_network",
+    "tax_map",
+    "currency_exchange",
+    "currency_throne",
+    "currency_generic",
+    "short_sellers_win",
+    "short_sellers_lose",
+    "timing_clock",
+    "market_boardgame",
+    "who_loses_scale",
+    "retail_holding",
+    "trading_hall",
+    "stock_chart",
+    "money_printer",
+    "gold_allocation",
+    "holy_cities",
+    "street_level",
+    "household",
+    "pensioners",
+    "job_market",
+    "housing_market",
+    "credit_machine",
+    "bank_run",
+    "bank_boardroom",
+    "bond_market",
+    "commodities_floor",
+    "energy_infrastructure",
+    "shipping_lanes",
+    "supply_chain_network",
+    "factory_floor",
+    "tech_platforms",
+    "data_center",
+    "ai_brain",
+    "innovation_labs",
+    "demographic_pyramid",
+    "aging_society",
+    "youth_bulge",
+    "inequality_gap",
+    "global_institutions",
+    "protest_square",
+    "parliament_vote",
+    "election_stage",
+    "crisis_timeline",
+    "recession_city",
+    "recovery_growth",
+    "bubble_mania",
+    "bubble_burst",
+    "debt_spiral",
+    "default_court",
+    "currency_crash",
+    "macro_dashboard",
+    "GENERIC_SCENE"
+  ],
+  "global_metaphors": [
+    "territory_chipping",
+    "time_cycle",
+    "capital_city",
+    "front_line",
+    "military_map",
+    "network_nodes",
+    "tax_migration",
+    "hands_exchange",
+    "currency_throne",
+    "currency_flood",
+    "candles",
+    "smooth_line",
+    "celebration",
+    "squeeze",
+    "clock_chart",
+    "boardgame",
+    "scale",
+    "household",
+    "empty_cart",
+    "store_of_value",
+    "quality_apps",
+    "rocket",
+    "money_gears",
+    "domino_chain",
+    "fault_line",
+    "pressure_gauge",
+    "thermometer",
+    "pyramid",
+    "cliff_edge",
+    "flood",
+    "drought",
+    "tug_of_war",
+    "see_saw",
+    "ladder",
+    "maze",
+    "gridlock",
+    "traffic_flow",
+    "fuse_and_bomb",
+    "iceberg",
+    "wave_crash",
+    "anchor",
+    "bridge",
+    "tightrope",
+    "chessboard",
+    "cards_and_dice",
+    "auction_hammer",
+    "conveyor_belt",
+    "furnace",
+    "valve",
+    "pipeline",
+    "web_of_contracts",
+    "data_streams",
+    "neural_network",
+    "control_room",
+    "stage_spotlight",
+    "shadow_players",
+    "marionette_strings"
+  ],
+  "themes": {
+    "empire_cycle": {
+      "scene_type_priority": [
+        "empire_map",
+        "empire_clocks",
+        "empire_capital",
+        "battlefield",
+        "info_network"
+      ],
+      "metaphors": [
+        "territory_chipping",
+        "time_cycle",
+        "capital_city",
+        "front_line",
+        "network_nodes"
+      ],
+      "notes": "Use maps, clocks and capital-city vistas to express long-term patterns across empires without relying on modern devices or charts."
+    },
+    "rome_chapter": {
+      "scene_type_priority": [
+        "empire_capital",
+        "empire_map",
+        "battlefield"
+      ],
+      "metaphors": [
+        "capital_city",
+        "territory_chipping",
+        "front_line"
+      ],
+      "notes": "Roman Empire visuals should favor ancient architecture, stone maps, and early battlefields. No modern screens."
+    },
+    "ottoman_chapter": {
+      "scene_type_priority": [
+        "empire_capital",
+        "empire_map",
+        "holy_cities"
+      ],
+      "metaphors": [
+        "capital_city",
+        "territory_chipping",
+        "pilgrimage"
+      ],
+      "notes": "Ottoman scenes should highlight palaces, maps around Mediterranean/Middle East, and holy cities when appropriate."
+    },
+    "british_chapter": {
+      "scene_type_priority": [
+        "empire_capital",
+        "empire_map",
+        "war_map"
+      ],
+      "metaphors": [
+        "capital_city",
+        "territory_chipping",
+        "military_map"
+      ],
+      "notes": "British Empire: imperial halls, world maps with sea routes, and naval/military dominance motifs."
+    },
+    "soviet_chapter": {
+      "scene_type_priority": [
+        "empire_capital",
+        "war_map",
+        "battlefield"
+      ],
+      "metaphors": [
+        "capital_city",
+        "military_map",
+        "front_line"
+      ],
+      "notes": "Soviet visuals: Kremlin-like architecture, Eastern European maps, Cold War military presence. Avoid modern Western trading UI."
+    },
+    "us_superpower": {
+      "scene_type_priority": [
+        "empire_capital",
+        "tax_map",
+        "stock_chart",
+        "trading_hall",
+        "macro_dashboard"
+      ],
+      "metaphors": [
+        "capital_city",
+        "tax_migration",
+        "smooth_line",
+        "candles",
+        "macro_context"
+      ],
+      "notes": "United States as modern superpower: Washington/NYC, US maps, trading floors and charts for financial dominance."
+    },
+    "war_and_conflict": {
+      "scene_type_priority": [
+        "battlefield",
+        "war_map",
+        "military_deployment"
+      ],
+      "metaphors": [
+        "front_line",
+        "military_map",
+        "air_power"
+      ],
+      "notes": "War themes should prefer battlefields, military maps and air power scenes; avoid generic offices or trading halls."
+    },
+    "currency_hegemony": {
+      "scene_type_priority": [
+        "currency_throne",
+        "currency_exchange",
+        "tax_map",
+        "currency_generic"
+      ],
+      "metaphors": [
+        "currency_throne",
+        "hands_exchange",
+        "tax_migration",
+        "currency_flood"
+      ],
+      "notes": "Currency dominance is best shown with throne-like setups, currency symbols, global maps and exchange scenes."
+    },
+    "trading_behaviour": {
+      "scene_type_priority": [
+        "trading_hall",
+        "stock_chart",
+        "short_sellers_win",
+        "short_sellers_lose",
+        "timing_clock",
+        "market_boardgame"
+      ],
+      "metaphors": [
+        "candles",
+        "smooth_line",
+        "celebration",
+        "squeeze",
+        "clock_chart",
+        "boardgame"
+      ],
+      "notes": "Behaviour of traders and funds: trading halls, vivid charts, timing clocks and boardgame metaphors. Avoid using empire-style visuals here."
+    },
+    "distributional_impact": {
+      "scene_type_priority": [
+        "who_loses_scale",
+        "retail_holding",
+        "street_level",
+        "household",
+        "pensioners"
+      ],
+      "metaphors": [
+        "scale",
+        "household",
+        "empty_cart",
+        "ladder",
+        "tightrope"
+      ],
+      "notes": "Who loses: scale scenes, stressed households and street-level views of ordinary people under pressure. Emphasize human faces, not charts."
+    },
+    "tax_migration": {
+      "scene_type_priority": [
+        "tax_map",
+        "empire_map",
+        "street_level"
+      ],
+      "metaphors": [
+        "tax_migration",
+        "territory_chipping",
+        "suitcase_departure"
+      ],
+      "notes": "Tax migration: maps with arrows from high-tax to low-tax regions, money flows and state outlines, plus people literally moving."
+    },
+    "money_printing": {
+      "scene_type_priority": [
+        "money_printer",
+        "currency_generic",
+        "macro_dashboard"
+      ],
+      "metaphors": [
+        "printer",
+        "currency_flood",
+        "furnace",
+        "valve"
+      ],
+      "notes": "Money printer: industrial presses, sheets of banknotes, furnaces or valves releasing currency as steam or liquid."
+    },
+    "gold_store_of_value": {
+      "scene_type_priority": [
+        "gold_allocation",
+        "ERA_ANCIENT_SCENE",
+        "ERA_MEDIEVAL_SCENE"
+      ],
+      "metaphors": [
+        "gold_pie",
+        "store_of_value",
+        "vault"
+      ],
+      "notes": "Gold: gold pie charts, vaults, and historic uses as money; keep it timeless, not digital-only."
+    },
+    "quality_companies": {
+      "scene_type_priority": [
+        "QUALITY_APPS_SCENE",
+        "stock_chart"
+      ],
+      "metaphors": [
+        "quality_apps",
+        "smooth_line",
+        "stable_foundations"
+      ],
+      "notes": "Quality companies: glowing app-like icons, well-lit city streets, and stable growth lines. Avoid hectic crash visuals."
+    },
+    "timing_focus": {
+      "scene_type_priority": [
+        "timing_clock",
+        "empire_clocks",
+        "rocket_gain"
+      ],
+      "metaphors": [
+        "clock_chart",
+        "time_cycle",
+        "rocket"
+      ],
+      "notes": "Timing: use clocks merged with charts, plus occasional rockets for dramatic timing wins."
+    },
+    "holy_cities_theme": {
+      "scene_type_priority": [
+        "holy_cities",
+        "empire_map"
+      ],
+      "metaphors": [
+        "pilgrimage",
+        "territory_chipping"
+      ],
+      "notes": "Holy cities: respectful cityscapes, crowds and architecture. No screens or overt finance metaphors."
+    },
+    "credit_cycle": {
+      "scene_type_priority": [
+        "credit_machine",
+        "bank_boardroom",
+        "bond_market",
+        "debt_spiral",
+        "default_court"
+      ],
+      "metaphors": [
+        "money_gears",
+        "domino_chain",
+        "pipeline",
+        "web_of_contracts",
+        "spiral"
+      ],
+      "notes": "Credit cycles: money machines, gears, domino chains of obligations, pipelines and spirals for over-indebtedness."
+    },
+    "housing_cycle": {
+      "scene_type_priority": [
+        "housing_market",
+        "street_level",
+        "bubble_mania",
+        "bubble_burst"
+      ],
+      "metaphors": [
+        "pyramid",
+        "cliff_edge",
+        "balloon",
+        "cracked_foundations"
+      ],
+      "notes": "Housing: rows of houses, cranes, for-sale signs, balloons for bubbles and cracked foundations for busts."
+    },
+    "labor_market": {
+      "scene_type_priority": [
+        "job_market",
+        "street_level",
+        "factory_floor",
+        "office_interior"
+      ],
+      "metaphors": [
+        "ladder",
+        "queue",
+        "empty_chairs",
+        "conveyor_belt"
+      ],
+      "notes": "Labor: job fairs, lines of people, hiring boards, empty desks or busy factories. Show people, not just charts."
+    },
+    "inflation_cost_of_living": {
+      "scene_type_priority": [
+        "street_level",
+        "household",
+        "empty_cart",
+        "macro_dashboard"
+      ],
+      "metaphors": [
+        "thermometer",
+        "pressure_gauge",
+        "shrinking_basket",
+        "fuse_and_bomb"
+      ],
+      "notes": "Inflation: supermarket aisles, shrinking shopping baskets, thermometers and pressure gauges for rising prices."
+    },
+    "inequality": {
+      "scene_type_priority": [
+        "inequality_gap",
+        "street_level",
+        "pensioners",
+        "global_institutions"
+      ],
+      "metaphors": [
+        "pyramid",
+        "cliff_edge",
+        "see_saw",
+        "shadow_players"
+      ],
+      "notes": "Inequality: split screens of luxury vs struggle, pyramids and see-saws, distant elites versus everyday people."
+    },
+    "global_trade_supply": {
+      "scene_type_priority": [
+        "shipping_lanes",
+        "supply_chain_network",
+        "factory_floor",
+        "commodities_floor"
+      ],
+      "metaphors": [
+        "traffic_flow",
+        "pipeline",
+        "gridlock",
+        "wave_crash"
+      ],
+      "notes": "Global trade: ships, containers, ports and logistics. Use networks, traffic and waves to show flows and breaks."
+    },
+    "energy_transition": {
+      "scene_type_priority": [
+        "energy_infrastructure",
+        "commodities_floor",
+        "macro_dashboard"
+      ],
+      "metaphors": [
+        "valve",
+        "furnace",
+        "anchor",
+        "bridge"
+      ],
+      "notes": "Energy: pipelines, power plants, wind and solar next to old fossil infrastructure. Use valves and furnaces to show constraint."
+    },
+    "technology_platforms": {
+      "scene_type_priority": [
+        "tech_platforms",
+        "data_center",
+        "ai_brain",
+        "info_network"
+      ],
+      "metaphors": [
+        "neural_network",
+        "data_streams",
+        "control_room",
+        "stage_spotlight"
+      ],
+      "notes": "Big tech and AI: screens of services, glowing nodes, data centers, and stylized neural networks."
+    },
+    "political_risk": {
+      "scene_type_priority": [
+        "parliament_vote",
+        "election_stage",
+        "protest_square",
+        "global_institutions"
+      ],
+      "metaphors": [
+        "stage_spotlight",
+        "shadow_players",
+        "tug_of_war",
+        "tightrope"
+      ],
+      "notes": "Political risk: parliaments, campaign stages, protests and institutions. Use tug-of-war and tightrope for fragile balances."
+    },
+    "crisis_and_recovery": {
+      "scene_type_priority": [
+        "crisis_timeline",
+        "recession_city",
+        "bubble_burst",
+        "recovery_growth"
+      ],
+      "metaphors": [
+        "fault_line",
+        "wave_crash",
+        "ladder",
+        "bridge"
+      ],
+      "notes": "Crises: cracked timelines, empty streets, bubble bursts. Recovery: bridges, ladders and new sprouts in cityscapes."
+    }
+  },
+  "fallback": {
+    "scene_type_priority": [
+      "generic",
+      "stock_chart",
+      "macro_dashboard",
+      "GENERIC_SCENE"
+    ],
+    "metaphors": [
+      "macro_context",
+      "smooth_line"
+    ],
+    "notes": "Used when no specific theme matches; SceneEngine and planners should then rely on keyword rules and generic templates."
+  }
+}

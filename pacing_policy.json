@@ -1,0 +1,436 @@
+{
+  "version": 1,
+  "channel": "CapitalChronicles",
+  "description": "Pacing and diversity policy for CapitalChronicles. Defines per-video limits and spacing rules for scene types so that long-form (30–60 min) videos remain visually varied, coherent, and non-repetitive.",
+  "defaults": {
+    "max_per_video": {
+      "empire_map": 10,
+      "empire_clocks": 6,
+      "empire_capital": 10,
+      "battlefield": 8,
+      "war_map": 8,
+      "military_deployment": 6,
+      "info_network": 8,
+      "tax_map": 8,
+      "currency_exchange": 6,
+      "currency_throne": 4,
+      "currency_generic": 8,
+      "stock_chart": 14,
+      "trading_hall": 12,
+      "retail_holding": 10,
+      "short_sellers_win": 4,
+      "short_sellers_lose": 4,
+      "timing_clock": 6,
+      "market_boardgame": 4,
+      "who_loses_scale": 6,
+      "money_printer": 4,
+      "gold_allocation": 6,
+      "holy_cities": 6,
+      "street_level": 12,
+      "household": 10,
+      "pensioners": 6,
+      "job_market": 8,
+      "housing_market": 8,
+      "credit_machine": 6,
+      "bank_run": 4,
+      "bank_boardroom": 6,
+      "bond_market": 6,
+      "commodities_floor": 6,
+      "energy_infrastructure": 6,
+      "shipping_lanes": 6,
+      "supply_chain_network": 6,
+      "factory_floor": 6,
+      "tech_platforms": 8,
+      "data_center": 6,
+      "ai_brain": 6,
+      "innovation_labs": 4,
+      "demographic_pyramid": 4,
+      "aging_society": 4,
+      "youth_bulge": 4,
+      "inequality_gap": 8,
+      "global_institutions": 8,
+      "protest_square": 8,
+      "parliament_vote": 6,
+      "election_stage": 6,
+      "crisis_timeline": 8,
+      "recession_city": 8,
+      "recovery_growth": 8,
+      "bubble_mania": 4,
+      "bubble_burst": 4,
+      "debt_spiral": 4,
+      "default_court": 4,
+      "currency_crash": 4,
+      "macro_dashboard": 12,
+      "GENERIC_SCENE": 20
+    },
+    "min_per_video": {
+      "street_level": 4,
+      "household": 2,
+      "stock_chart": 4,
+      "trading_hall": 2,
+      "empire_map": 2,
+      "macro_dashboard": 2
+    },
+    "spacing": {
+      "no_immediate_repeat": [
+        "empire_map",
+        "empire_capital",
+        "battlefield",
+        "war_map",
+        "holy_cities",
+        "tax_map",
+        "short_sellers_win",
+        "short_sellers_lose",
+        "who_loses_scale",
+        "money_printer",
+        "gold_allocation",
+        "market_boardgame",
+        "credit_machine",
+        "bank_run",
+        "bubble_mania",
+        "bubble_burst",
+        "debt_spiral",
+        "default_court",
+        "currency_crash"
+      ],
+      "min_gap": {
+        "empire_map": 1,
+        "empire_capital": 1,
+        "battlefield": 1,
+        "war_map": 1,
+        "holy_cities": 2,
+        "tax_map": 1,
+        "short_sellers_win": 4,
+        "short_sellers_lose": 4,
+        "who_loses_scale": 2,
+        "money_printer": 4,
+        "gold_allocation": 2,
+        "market_boardgame": 3,
+        "credit_machine": 3,
+        "bank_run": 5,
+        "bubble_mania": 5,
+        "bubble_burst": 5,
+        "debt_spiral": 4,
+        "default_court": 4,
+        "currency_crash": 4
+      }
+    }
+  },
+  "by_theme_overrides": {
+    "empire_cycle": {
+      "max_per_video": {
+        "empire_map": 12,
+        "empire_clocks": 8,
+        "empire_capital": 12
+      },
+      "spacing": {
+        "min_gap": {
+          "empire_map": 0,
+          "empire_capital": 0
+        }
+      }
+    },
+    "trading_behaviour": {
+      "max_per_video": {
+        "stock_chart": 18,
+        "trading_hall": 16,
+        "short_sellers_win": 6,
+        "short_sellers_lose": 6
+      },
+      "spacing": {
+        "no_immediate_repeat": [
+          "short_sellers_win",
+          "short_sellers_lose"
+        ]
+      }
+    },
+    "inflation_cost_of_living": {
+      "max_per_video": {
+        "street_level": 16,
+        "household": 12,
+        "empty_cart": 10
+      }
+    },
+    "inequality": {
+      "max_per_video": {
+        "inequality_gap": 12,
+        "street_level": 16,
+        "pensioners": 10
+      }
+    },
+    "credit_cycle": {
+      "max_per_video": {
+        "credit_machine": 8,
+        "bank_boardroom": 8,
+        "bond_market": 8,
+        "debt_spiral": 6,
+        "default_court": 6
+      }
+    },
+    "housing_cycle": {
+      "max_per_video": {
+        "housing_market": 10,
+        "bubble_mania": 6,
+        "bubble_burst": 6
+      }
+    },
+    "global_trade_supply": {
+      "max_per_video": {
+        "shipping_lanes": 10,
+        "supply_chain_network": 10,
+        "factory_floor": 8
+      }
+    },
+    "energy_transition": {
+      "max_per_video": {
+        "energy_infrastructure": 10,
+        "commodities_floor": 8
+      }
+    },
+    "technology_platforms": {
+      "max_per_video": {
+        "tech_platforms": 12,
+        "data_center": 10,
+        "ai_brain": 8
+      }
+    },
+    "political_risk": {
+      "max_per_video": {
+        "parliament_vote": 8,
+        "election_stage": 8,
+        "protest_square": 10,
+        "global_institutions": 10
+      }
+    },
+    "crisis_and_recovery": {
+      "max_per_video": {
+        "crisis_timeline": 10,
+        "recession_city": 10,
+        "recovery_growth": 10
+      }
+    }
+  },
+  "families": {
+    "empire_family": ["empire_map", "empire_clocks", "empire_capital"],
+    "battle_family": ["battlefield", "war_map", "military_deployment"],
+    "chart_family": ["stock_chart", "macro_dashboard", "trading_hall"],
+    "household_family": ["street_level", "household", "pensioners"],
+    "crisis_family": ["bubble_mania", "bubble_burst", "debt_spiral", "currency_crash", "bank_run"],
+    "tax_family": ["tax_map", "currency_throne"],
+    "holy_family": ["holy_cities", "empire_map"],
+    "tech_family": ["tech_platforms", "data_center", "ai_brain", "innovation_labs"],
+    "institution_family": ["global_institutions", "parliament_vote", "election_stage", "protest_square"]
+  },
+  "family_spacing": {
+    "family_min_gap": {
+      "empire_family": 1,
+      "battle_family": 2,
+      "chart_family": 0,
+      "household_family": 1,
+      "crisis_family": 4,
+      "tax_family": 1,
+      "holy_family": 2,
+      "tech_family": 1,
+      "institution_family": 1
+    }
+  },
+  "global_arc": {
+    "description": "Soft constraints for where certain scene families should appear in a long 30–60 minute narrative. Planners can treat these as preferences, not hard rules.",
+    "early_phase": {
+      "preferred_families": ["empire_family", "chart_family", "macro_dashboard"],
+      "notes": "Use more maps, dashboards and big-picture setups in the first third of the video."
+    },
+    "mid_phase": {
+      "preferred_families": ["household_family", "tax_family", "tech_family", "battle_family"],
+      "notes": "Move closer to people, taxes, technology and conflicts in the middle third."
+    },
+    "late_phase": {
+      "preferred_families": ["crisis_family", "institution_family", "empire_family"],
+      "notes": "Reserve the heaviest crises and institutional moments for the final third, along with key empire comparisons."
+    }
+  },
+  "high_impact_caps": {
+    "bank_run": 2,
+    "default_court": 2,
+    "bubble_mania": 3,
+    "bubble_burst": 3,
+    "debt_spiral": 3,
+    "currency_crash": 3,
+    "protest_square": 6
+  },
+  "intensity_score": {
+    "empire_map": 1,
+    "empire_clocks": 2,
+    "empire_capital": 2,
+    "battlefield": 4,
+    "war_map": 3,
+    "military_deployment": 4,
+    "stock_chart": 2,
+    "trading_hall": 3,
+    "retail_holding": 2,
+    "who_loses_scale": 3,
+    "street_level": 2,
+    "household": 3,
+    "pensioners": 3,
+    "tax_map": 2,
+    "money_printer": 4,
+    "gold_allocation": 2,
+    "credit_machine": 3,
+    "bank_run": 5,
+    "bank_boardroom": 3,
+    "bond_market": 2,
+    "commodities_floor": 2,
+    "energy_infrastructure": 3,
+    "shipping_lanes": 2,
+    "supply_chain_network": 2,
+    "factory_floor": 2,
+    "tech_platforms": 2,
+    "data_center": 2,
+    "ai_brain": 3,
+    "innovation_labs": 2,
+    "demographic_pyramid": 2,
+    "aging_society": 3,
+    "youth_bulge": 2,
+    "inequality_gap": 4,
+    "global_institutions": 3,
+    "protest_square": 4,
+    "parliament_vote": 3,
+    "election_stage": 3,
+    "crisis_timeline": 5,
+    "recession_city": 4,
+    "recovery_growth": 3,
+    "bubble_mania": 4,
+    "bubble_burst": 5,
+    "debt_spiral": 5,
+    "default_court": 4,
+    "currency_crash": 5,
+    "macro_dashboard": 2,
+    "GENERIC_SCENE": 1
+  },
+  "chapter_score_limits": {
+    "default": 30,
+    "empire_cycle": 40,
+    "trading_behaviour": 40,
+    "credit_cycle": 40,
+    "crisis_and_recovery": 45
+  }
+}
+{
+  "version": 1,
+  "channel": "CapitalChronicles",
+  "description": "Natural visual style hints for recurring entities in CapitalChronicles. Used by planners to keep empires, countries, asset classes and actors visually consistent across episodes.",
+  "entities": {
+    "roman_empire": {
+      "display_name": "Roman Empire",
+      "role": "empire",
+      "palette": ["warm_stone", "gold", "deep_red"],
+      "architecture": ["marble_columns", "arches", "forums"],
+      "symbols": ["eagle_standard", "laurel_wreath"],
+      "avoid": ["modern_screens", "glass_skyscrapers"]
+    },
+    "ottoman_empire": {
+      "display_name": "Ottoman Empire",
+      "role": "empire",
+      "palette": ["warm_earth", "turquoise", "deep_green"],
+      "architecture": ["domes", "minarets", "palaces"],
+      "symbols": ["crescent_moon", "calligraphy_panels"],
+      "avoid": ["western_boardrooms", "modern_trading_floors"]
+    },
+    "british_empire": {
+      "display_name": "British Empire",
+      "role": "empire",
+      "palette": ["muted_red", "navy_blue", "stone_grey"],
+      "architecture": ["parliament_buildings", "clock_towers", "harbors"],
+      "symbols": ["union_flag_motif", "naval_icons"],
+      "avoid": ["tropical_cityscapes_without_ports"]
+    },
+    "soviet_union": {
+      "display_name": "Soviet Union",
+      "role": "empire",
+      "palette": ["deep_red", "concrete_grey", "cold_blue"],
+      "architecture": ["kremlin_silhouette", "brutalist_blocks"],
+      "symbols": ["star_shape", "industrial_motifs"],
+      "avoid": ["slick_modern_glass_offices"]
+    },
+    "united_states": {
+      "display_name": "United States",
+      "role": "country",
+      "palette": ["navy_blue", "off_white", "muted_red"],
+      "architecture": ["capital_dom e", "skyscrapers", "suburban_houses"],
+      "symbols": ["eagle_shape", "flag_silhouette"],
+      "avoid": ["ancient_stone_ruins"]
+    },
+    "gold": {
+      "display_name": "Gold",
+      "role": "asset_class",
+      "palette": ["rich_gold", "dark_brown"],
+      "objects": ["coins", "bars", "vault_doors"],
+      "symbols": ["weight_scales"],
+      "avoid": ["bright_plastic_colors"]
+    },
+    "bonds": {
+      "display_name": "Bonds",
+      "role": "asset_class",
+      "palette": ["paper_white", "ink_black", "muted_green"],
+      "objects": ["certificates", "paper_contracts"],
+      "symbols": ["interest_coupons"],
+      "avoid": ["flashy_neon_charts"]
+    },
+    "stocks": {
+      "display_name": "Stocks",
+      "role": "asset_class",
+      "palette": ["screen_blue", "chart_green", "chart_red"],
+      "objects": ["screens", "tickers", "order_books"],
+      "symbols": ["arrows_up_down"],
+      "avoid": ["ancient_parchment"]
+    },
+    "retail_investor": {
+      "display_name": "Retail Investor",
+      "role": "actor",
+      "palette": ["neutral_home_tones"],
+      "environments": ["living_room", "small_home_office"],
+      "symbols": ["modest_laptop", "phone_with_app"],
+      "avoid": ["large_trading_floor", "lavish_boardrooms"]
+    },
+    "hedge_fund": {
+      "display_name": "Hedge Fund Manager",
+      "role": "actor",
+      "palette": ["cool_blue", "steel_grey"],
+      "environments": ["glass_office", "trading_floor"],
+      "symbols": ["multiple_monitors", "conference_table"],
+      "avoid": ["crowded_supermarket", "suburban_kitchen"]
+    },
+    "central_bank": {
+      "display_name": "Central Bank",
+      "role": "institution",
+      "palette": ["stone_grey", "deep_blue"],
+      "architecture": ["grand_office", "marble_lobby"],
+      "symbols": ["seal_motif", "press_podium"],
+      "avoid": ["small_shop_interior"]
+    },
+    "big_tech": {
+      "display_name": "Big Tech Platforms",
+      "role": "company_group",
+      "palette": ["saturated_blue", "purple", "teal"],
+      "environments": ["modern_office", "data_center"],
+      "symbols": ["abstract_app_icons", "server_racks"],
+      "avoid": ["old_factory_floor"]
+    },
+    "oil_state": {
+      "display_name": "Oil-Producing State",
+      "role": "country_group",
+      "palette": ["desert_tones", "dark_oil"],
+      "environments": ["oil_fields", "pipelines", "export_terminals"],
+      "symbols": ["oil_rig_silhouettes"],
+      "avoid": ["dense_rainforest"]
+    },
+    "emerging_market": {
+      "display_name": "Emerging Market",
+      "role": "country_group",
+      "palette": ["warm_city_colors"],
+      "environments": ["busy_city_streets", "informal_markets"],
+      "symbols": ["buses", "street_stalls"],
+      "avoid": ["sterile_corporate_parks"]
+    }
+  }
+}

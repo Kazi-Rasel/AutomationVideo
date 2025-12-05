@@ -1,0 +1,568 @@
+{
+  "global": {
+    "prompt_prefix": "",
+    "prompt_suffix": "",
+    "max_same_template_streak": 2,
+    "negative_prompt": "meme text, subtitles, caption boxes, big readable words, centered paragraphs of text, presentation slides, digital UI elements, stock photo look, flat corporate infographics, anime, flat cartoon style, 3D render, glitch effects, duplicated faces, warped hands, deformed bodies, big blackboards filled with writing, open books showing clear sentences, beauty-portrait photography, glamor close-ups, heavily retouched faces, people casually reading books or doing unrelated domestic activities when the line is about money or markets."
+  },
+
+  "style": {
+    "art_style": "cinematic digital painting with a subtle painterly texture",
+    "tone": "serious, investigative, dramatic but grounded",
+    "people_style": "realistic but stylized, not uncanny, no direct photo look of real celebrities",
+    "palette": "muted blues, golds, rich earth tones and neutral backgrounds",
+    "camera": "mix of wide establishing shots, medium tableaus around tables or maps, and dramatic close-ups on hands, faces, and key objects"
+  },
+
+  "llm": {
+    "channel_theme": [
+      "macro finance",
+      "geopolitics",
+      "war and money",
+      "economic history",
+      "modern market cycles"
+    ],
+    "target_audience": "curious investors and history-minded viewers who want clear stories about money, power, and empires",
+    "avoid": [
+      "cartoon style visuals",
+      "cheap meme graphics or reaction images",
+      "plain screenshots of charts or UI",
+      "flat PowerPoint-style infographics",
+      "overly futuristic sci-fi settings unless the script explicitly discusses the future",
+      "overly cinematic character close-ups that look like fashion or beauty shots",
+      "scenes where the focal point is a person posing rather than the financial mechanism being described"
+    ],
+    "style_notes": [
+      "Prefer metaphors built from coins, ledgers, vaults, maps, uniforms, parliaments, trading floors, and city skylines.",
+      "When choosing a setting, favor banks, government halls, battlefields, factories, ports, and streets that show economic impact on ordinary people.",
+      "Images should feel like scenes from a prestige documentary about finance and history, not like advertisements or thumbnails.",
+      "If the line mentions a specific person or institution, keep that character or building visually consistent across scenes in the same job.",
+      "When in doubt, visualize financial mechanisms and power structures that explain the line instead of generic cityscapes.",
+      "When the script explicitly mentions individual stocks, tickers, trading, buying or selling positions, or short sellers winning or losing, the scene SHOULD include a visible chart or graph somewhere in the composition. This chart can appear on a device, on a wall, projected over a map, drawn on paper, or implied by stacks of coins or buildings, but it must be clearly financial (trend lines, bars or pie slices) and must not overwhelm the rest of the metaphor.",
+      "For broad valuations, long-term patterns, historical empires or macro cycles, avoid defaulting to a modern tablet or monitor. Prefer charts embedded in maps, walls, coins, clocks, parchment or the landscape itself, or omit screens entirely if the metaphor already makes the idea clear.",
+      "For those stock-related lines, avoid portrait-style glamor shots; keep the camera composed around the chart, the environment, and the investor's posture so the viewer instantly understands the financial stakes.",
+      "For scenes set in earlier eras (such as Napoleonic or early 19th century Europe), architecture should look pre-industrial: stone facades, church spires, narrow streets and plazas, no skyscrapers, highways, smokestacks, or modern cars visible in the background.",
+      "When illustrating historical finance or credit mechanics, prefer charts inked on parchment, maps, or ledger pages, or stacks of coins arranged in graph-like shapes, instead of modern glowing screens.",
+      "Avoid using the same table-with-coins-and-documents composition in every scene; vary camera distance, angle, and setting (battlefields, streets, banks, parliaments, households) so repeated concepts feel fresh and dynamic within each job."
+    ]
+  },
+
+  "rules": [
+    {
+      "id": "ERA_ANCIENT",
+      "priority": 1,
+      "any_keywords": ["ancient", "roman empire", "athens", "spartans", "antiquity", "mesopotamia", "pharaoh", "salt trade"],
+      "template": "ERA_ANCIENT_SCENE"
+    },
+    {
+      "id": "ERA_MEDIEVAL",
+      "priority": 2,
+      "any_keywords": ["medieval", "middle ages", "feudal", "serf", "manorial", "crusades", "guild"],
+      "template": "ERA_MEDIEVAL_SCENE"
+    },
+    {
+      "id": "ERA_RENAISSANCE",
+      "priority": 3,
+      "any_keywords": ["renaissance", "florence", "venice banking", "medici", "early modern"],
+      "template": "ERA_RENAISSANCE_SCENE"
+    },
+    {
+      "id": "ERA_1700S",
+      "priority": 4,
+      "any_keywords": ["17th century", "18th century", "colonial", "mercantilism", "british empire", "east india company"],
+      "template": "ERA_1700S_SCENE"
+    },
+    {
+      "id": "ERA_1800S",
+      "priority": 5,
+      "any_keywords": ["19th century", "victorian", "industrial revolution", "steam power", "railroads"],
+      "template": "ERA_1800S_SCENE"
+    },
+    {
+      "id": "ERA_1900S",
+      "priority": 6,
+      "any_keywords": ["20th century", "1910", "1920", "1930", "great depression", "post war", "cold war", "bretton woods"],
+      "template": "ERA_1900S_SCENE"
+    },
+    {
+      "id": "ERA_2000S",
+      "priority": 7,
+      "any_keywords": ["2000", "2001", "2002", "2003", "2004", "2005", "2006", "2007", "2008", "2009", "2010", "dot com", "dot-com", "global financial crisis", "gfc", "lehman", "subprime", "cdo", "cds", "mbs", "mortgage backed security", "mortgage-backed security"],
+      "template": "ERA_2000S_SCENE"
+    },
+    {
+      "id": "ERA_FUTURE",
+      "priority": 8,
+      "any_keywords": ["future", "futuristic", "2030", "2040", "future economy", "future debt"],
+      "template": "ERA_FUTURE_SCENE"
+    },
+    {
+      "id": "MACRO_GOLD",
+      "priority": 10,
+      "any_keywords": ["gold", "bullion", "gold bar", "sovereign coin", "gold reserve", "mint"],
+      "template": "MACRO_GOLD_SCENE"
+    },
+    {
+      "id": "MACRO_COINS",
+      "priority": 11,
+      "any_keywords": ["coinage", "minting", "coin supply", "metal currency"],
+      "template": "MACRO_COINS_SCENE"
+    },
+    {
+      "id": "PAPER_MONEY",
+      "priority": 12,
+      "any_keywords": ["banknotes", "paper money", "cash printing", "money printer", "bill", "note issuance"],
+      "template": "PAPER_MONEY_SCENE"
+    },
+    {
+      "id": "DEBT_METAPHOR",
+      "priority": 13,
+      "any_keywords": ["national debt", "public debt", "borrowed", "liability", "creditor", "bond burden", "interest payments", "debt spiral", "debt trap"],
+      "template": "DEBT_METAPHOR_SCENE"
+    },
+    {
+      "id": "TAX_SYMBOL",
+      "priority": 14,
+      "any_keywords": ["tax", "tax revenue", "taxation", "government revenue"],
+      "template": "TAX_CHEST_SCENE"
+    },
+    {
+      "id": "INFLATION_CONCEPT",
+      "priority": 15,
+      "any_keywords": ["inflation", "prices rising", "cost of living", "hyperinflation"],
+      "template": "INFLATION_SCENE"
+    },
+    {
+      "id": "DEFLATION_CONCEPT",
+      "priority": 16,
+      "any_keywords": ["deflation", "prices falling"],
+      "template": "DEFLATION_SCENE"
+    },
+    {
+      "id": "BANKING_HISTORY",
+      "priority": 20,
+      "any_keywords": ["bank of england", "first bank", "charter bank", "central bank founded"],
+      "template": "BANKING_HISTORY_SCENE"
+    },
+    {
+      "id": "BANKING_MODERN",
+      "priority": 21,
+      "any_keywords": ["central bank", "fed", "federal reserve", "european central bank", "ecb", "monetary policy", "interest rate decision"],
+      "template": "BANKING_MODERN_SCENE"
+    },
+    {
+      "id": "BANK_RUN",
+      "priority": 22,
+      "any_keywords": ["bank run", "depositors lining", "withdrawals", "atm lines"],
+      "template": "BANK_RUN_SCENE"
+    },
+    {
+      "id": "MARKET_PANIC",
+      "priority": 30,
+      "any_keywords": ["panic", "market crash", "sell off", "sell-off", "chaos", "fear index", "capitulation"],
+      "template": "PANIC_FLOOR_SCENE"
+    },
+    {
+      "id": "MARKET_EUPHORIA",
+      "priority": 31,
+      "any_keywords": ["boom", "bull market", "euphoria", "mania"],
+      "template": "MARKET_EUPHORIA_SCENE"
+    },
+    {
+      "id": "RETAIL_HOLDING",
+      "priority": 32,
+      "any_keywords": [
+        "hold stocks",
+        "holding stocks",
+        "held stocks",
+        "hold the bag",
+        "bagholder",
+        "bag holder",
+        "never sell",
+        "never selling",
+        "all the way down",
+        "refuse to sell",
+        "won't sell",
+        "can't sell"
+      ],
+      "template": "RETAIL_HOLDING_SCENE"
+    },
+    {
+      "id": "INSIDERS_VS_ORDINARY",
+      "priority": 33,
+      "any_keywords": [
+        "ordinary people",
+        "small investors",
+        "retail investors",
+        "average investor",
+        "little guy",
+        "insiders",
+        "insider selling",
+        "they're selling",
+        "while they sell",
+        "while the insiders"
+      ],
+      "template": "INSIDERS_VS_ORDINARY_SCENE"
+    },
+    {
+      "id": "YIELD_CURVE",
+      "priority": 34,
+      "any_keywords": ["yield curve", "bond yields", "%", "rate hikes", "treasury rate", "inverted curve"],
+      "template": "YIELD_CHALKBOARD_SCENE"
+    },
+    {
+      "id": "HEDGE_FUNDS",
+      "priority": 35,
+      "any_keywords": ["hedge fund", "fund manager", "quant", "short sellers"],
+      "template": "HEDGE_FUND_SCENE"
+    },
+    {
+      "id": "EMPIRE_TERRITORY",
+      "priority": 38,
+      "any_keywords": [
+        "empire", "empires", "imperial", "imperial power",
+        "controlled vast territories", "vast territories",
+        "ruled over", "colonial rule", "colonial possessions"
+      ],
+      "template": "EMPIRE_MAP_SCENE"
+    },
+    {
+      "id": "WAR_BATTLEFIELD",
+      "priority": 39,
+      "any_keywords": [
+        "war", "wars", "battle", "battles", "campaign",
+        "front line", "frontline", "invaded", "invasion",
+        "military clash", "fought over"
+      ],
+      "template": "BATTLEFIELD_SCENE"
+    },
+    {
+      "id": "MILITARY_DEPLOYMENT",
+      "priority": 40,
+      "any_keywords": [
+        "military deployment", "air strike", "airstrike",
+        "air force", "fighter jets", "warplanes", "bombers",
+        "missile strike", "rapid deployment"
+      ],
+      "template": "MILITARY_DEPLOYMENT_SCENE"
+    },
+    {
+      "id": "INFO_NETWORK",
+      "priority": 41,
+      "any_keywords": [
+        "information spreads", "spread instantly", "spread like wildfire",
+        "network of", "web of", "information network",
+        "communication network", "signals traveled", "news traveled"
+      ],
+      "template": "INFO_NETWORK_SCENE"
+    },
+    {
+      "id": "HOLY_CITIES",
+      "priority": 42,
+      "any_keywords": [
+        "holy cities", "holy city", "sacred cities", "pilgrimage city",
+        "sacred sites", "pilgrimage routes"
+      ],
+      "template": "HOLY_CITIES_SCENE"
+    },
+    {
+      "id": "CURRENCY_EXCHANGE",
+      "priority": 43,
+      "any_keywords": [
+        "exchange rate", "currency exchange", "fx market", "foreign exchange",
+        "currency war", "currency became", "currency strengthened", "currency weakened"
+      ],
+      "template": "CURRENCY_EXCHANGE_SCENE"
+    },
+    {
+      "id": "BIG_VALUATION",
+      "priority": 44,
+      "any_keywords": [
+        "market cap", "market capitalization", "valuation of",
+        "valued at", "worth about", "worth nearly", "company is worth",
+        "trillion dollar", "trillion-dollar", "multitrillion",
+        "massive valuation"
+      ],
+      "template": "BIG_VALUATION_SCENE"
+    },
+    {
+      "id": "TAX_MAP",
+      "priority": 45,
+      "any_keywords": [
+        "moved from", "relocated from", "moved to florida", "moved to texas",
+        "state income tax", "no income tax state", "tax haven state",
+        "left a high tax state", "left high-tax states"
+      ],
+      "template": "TAX_MAP_SCENE"
+    },
+    {
+      "id": "MILITARY_GLOBAL_FOOTPRINT",
+      "priority": 46,
+      "any_keywords": [
+        "military bases", "bases around the world", "global footprint",
+        "bases everywhere", "outposts around the world",
+        "deployed across the globe"
+      ],
+      "template": "MILITARY_GLOBAL_MAP_SCENE"
+    },
+    {
+      "id": "GEOPOLITICAL_CONFLICT",
+      "priority": 40,
+      "any_keywords": ["geopolitics", "superpower", "balance of power", "sanctions", "trade war"],
+      "template": "GEOPOLITICS_STAGE_SCENE"
+    },
+    {
+      "id": "BRICS",
+      "priority": 41,
+      "any_keywords": ["brics", "china", "india", "russia", "south africa", "brazil"],
+      "template": "BRICS_SCENE"
+    },
+    {
+      "id": "DE_DOLLARIZATION",
+      "priority": 42,
+      "any_keywords": ["de-dollarization", "dedollarization", "reserve currency shift", "usd dominance"],
+      "template": "DEDOLLAR_SCENE"
+    },
+    {
+      "id": "CRYPTO",
+      "priority": 50,
+      "any_keywords": ["bitcoin", "crypto", "blockchain", "mining", "digital asset"],
+      "template": "CRYPTO_SCENE"
+    },
+    {
+      "id": "CBDC",
+      "priority": 51,
+      "any_keywords": ["cbdc", "digital dollar", "digital yuan", "digital currency"],
+      "template": "CBDC_SCENE"
+    },
+    {
+      "id": "WHO_LOSES_SCALE",
+      "priority": 52,
+      "any_keywords": ["who loses", "loses out", "gets hurt most", "pays the price"],
+      "template": "LOSERS_SCALE_SCENE"
+    },
+    {
+      "id": "MONEY_PRINTER",
+      "priority": 53,
+      "any_keywords": ["money printer", "printing money", "flooding the system", "liquidity injection"],
+      "template": "MONEY_PRINTER_SCENE"
+    },
+    {
+      "id": "MARKET_BOARDGAME",
+      "priority": 54,
+      "any_keywords": ["board game", "game of", "sell high", "buy low", "playing the market"],
+      "template": "BOARDGAME_MARKET_SCENE"
+    },
+    {
+      "id": "GOLD_ALLOCATION",
+      "priority": 55,
+      "any_keywords": ["allocate to gold", "gold allocation", "portion of portfolio in gold", "hedge with gold"],
+      "template": "GOLD_PIE_SCENE"
+    },
+    {
+      "id": "SHORT_SELLERS_WIN",
+      "priority": 56,
+      "any_keywords": ["short sellers win", "shorts win", "bet against and won"],
+      "template": "SHORT_WIN_SCENE"
+    },
+    {
+      "id": "SHORT_SELLERS_LOSE",
+      "priority": 57,
+      "any_keywords": ["short sellers lose", "shorts got squeezed", "short squeeze", "bet against and lost"],
+      "template": "SHORT_LOSE_SCENE"
+    },
+    {
+      "id": "TIMING_CLOCK",
+      "priority": 58,
+      "any_keywords": ["timing is everything", "got the timing right", "missed the timing", "right time", "wrong time"],
+      "template": "TIMING_CLOCK_SCENE"
+    },
+    {
+      "id": "ROCKET_GAIN",
+      "priority": 59,
+      "any_keywords": ["stock took off", "rocket", "moonshot", "shot up", "skyrocketed"],
+      "template": "ROCKET_STOCK_SCENE"
+    },
+    {
+      "id": "QUALITY_COMPANIES",
+      "priority": 59,
+      "any_keywords": ["quality companies", "strong balance sheets", "blue chip", "best businesses"],
+      "template": "QUALITY_APPS_SCENE"
+    },
+    {
+      "id": "HOUSING",
+      "priority": 60,
+      "any_keywords": ["housing market", "mortgage", "housing crash", "housing bubble", "subprime", "mortgage crisis", "foreclosure"],
+      "template": "HOUSING_SCENE"
+    },
+    {
+      "id": "FOOD_PRICES",
+      "priority": 61,
+      "any_keywords": ["food prices", "grocery", "agriculture", "shortage"],
+      "template": "FOOD_PRICE_SCENE"
+    },
+    {
+      "id": "LABOR_MARKET",
+      "priority": 62,
+      "any_keywords": ["jobs", "employment", "strike", "labor shortage", "unemployment"],
+      "template": "LABOR_SCENE"
+    },
+    {
+      "id": "PENSIONS",
+      "priority": 63,
+      "any_keywords": ["pension", "retirement", "retiree crisis"],
+      "template": "PENSION_SCENE"
+    },
+    {
+      "id": "STUDENT_LOANS",
+      "priority": 64,
+      "any_keywords": ["student loans", "tuition", "college debt"],
+      "template": "STUDENT_DEBT_SCENE"
+    },
+    {
+      "id": "INEQUALITY",
+      "priority": 65,
+      "any_keywords": ["wealth gap", "income inequality", "1%", "elite wealthy"],
+      "template": "INEQUALITY_SCENE"
+    },
+    {
+      "id": "BILLIONAIRES",
+      "priority": 66,
+      "any_keywords": ["billionaire", "billionaires", "ultra rich", "ultra-wealthy", "richest", "elite wealth", "tycoon"],
+      "template": "BILLIONAIRE_SCENE"
+    },
+    {
+      "id": "CORPORATE_CONTROL",
+      "priority": 67,
+      "any_keywords": ["blackrock", "vanguard", "state street", "owns everything", "who controls", "who owns", "asset manager", "giant funds"],
+      "template": "CORP_CONTROL_SCENE"
+    },
+    {
+      "id": "OIL_ENERGY",
+      "priority": 70,
+      "any_keywords": ["oil market", "crude", "opec", "pipeline"],
+      "template": "OIL_SCENE"
+    },
+    {
+      "id": "GLOBAL_TRADE",
+      "priority": 71,
+      "any_keywords": ["supply chain", "shipping", "container port", "global trade"],
+      "template": "TRADE_SCENE"
+    },
+    {
+      "id": "EXEC_ORDERS",
+      "priority": 80,
+      "any_keywords": ["executive order", "policy change", "law signed"],
+      "template": "EXEC_ORDER_SCENE"
+    },
+    {
+      "id": "TREATIES",
+      "priority": 81,
+      "any_keywords": ["treaty", "agreement", "summit"],
+      "template": "TREATY_SCENE"
+    },
+    {
+      "id": "IMF_BAILOUT",
+      "priority": 82,
+      "any_keywords": ["imf", "world bank", "bailout", "loan conditions"],
+      "template": "IMF_SCENE"
+    },
+    {
+      "id": "PROTESTS",
+      "priority": 90,
+      "any_keywords": ["protest", "riot", "crowd anger", "demonstration"],
+      "template": "PROTEST_SCENE"
+    },
+    {
+      "id": "ECON_TIMELINE",
+      "priority": 91,
+      "any_keywords": ["timeline", "over decades", "across years", "cycle"],
+      "template": "TIMELINE_SCENE"
+    },
+    {
+      "id": "GENERIC",
+      "priority": 999,
+      "any_keywords": [],
+      "template": "GENERIC_SCENE"
+    }
+  ],
+
+  "fallback_template": "GENERIC_SCENE",
+
+  "templates": {
+    "ERA_ANCIENT_SCENE": "Wide view of an ancient marketplace or treasury courtyard, stone buildings, clay tablets, scales and weighed goods, crowds in simple robes. The overall feeling should explain {slice_summary} without any modern objects. There should be no modern screens, tablets or glowing monitors.",
+    "ERA_MEDIEVAL_SCENE": "Medieval town square or guild hall, stone walls, wooden chests, coins on a table, banners and heraldry. A few figures in period clothing negotiate or trade, hinting at {slice_summary}. There should be no modern screens, tablets or glowing monitors.",
+    "ERA_RENAISSANCE_SCENE": "Renaissance counting house or city loggia overlooking Florence or Venice, marble columns, ledgers and quills, distant ships or domes. The arrangement quietly illustrates {slice_summary}. There should be no modern screens, tablets or glowing monitors.",
+    "ERA_1700S_SCENE": "18th century trading office or busy port, sailing ships, maps and charters on a desk, merchants in wigs and coats. Use the scene to suggest {slice_summary} with a varied composition, not just men standing in a row. There should be no modern screens, tablets or glowing monitors.",
+    "ERA_1800S_SCENE": "19th century industrial city street or factory district, brick buildings, steam, early rail lines, posters and shopfronts. The environment conveys {slice_summary} more than close‑up documents. There should be no modern screens, tablets or glowing monitors.",
+    "ERA_1900S_SCENE": "20th century finance or political setting appropriate to the decade—early stock exchange floor, Great Depression breadline, post‑war conference room, or Cold War skyline—chosen to echo {slice_summary}. There should be no modern screens, tablets or glowing monitors; any charts should appear on paper or boards only.",
+    "ERA_2000S_SCENE": "Early 2000s financial world: modern glass offices, Wall Street style trading floor, glowing monitors with abstract graphs, city at dusk. The layout should clearly reference {slice_summary} such as the subprime era without showing any screen text.",
+    "ERA_FUTURE_SCENE": "Near‑future economic landscape painted in oils: stylized city of towers, abstract digital currency icons, flowing data‑like light trails. The scene symbolically represents {slice_summary} while staying grounded and not fully sci‑fi.",
+
+    "LOSERS_SCALE_SCENE": "Painterly scene of a tired middle-class person standing beside a large balance scale: one side piled high with money or assets, the other side holding only a few bills or debts. The imbalance should wordlessly express {slice_summary} about who loses, with no on-screen text.",
+    "MONEY_PRINTER_SCENE": "Row of old-fashioned industrial printing presses spitting out banknotes onto the floor, with warm light highlighting the endless sheets of money. The machines and motion should illustrate {slice_summary} about money printing without any readable text on the notes.",
+    "BOARDGAME_MARKET_SCENE": "Tabletop board game styled like a map of markets or countries, with miniature houses, factories, and coins as pieces. Hands are moving tokens to sell high and buy low, making {slice_summary} feel like a literal game.",
+    "GOLD_PIE_SCENE": "Large golden coin sliced like a pie chart, with one or more wedges pulled out and placed slightly apart. The background is a muted landscape or study, and the relative wedge sizes should reflect {slice_summary} about allocating a portion to gold.",
+    "SHORT_WIN_SCENE": "Energetic trading hall where a small group of traders celebrates around charts showing dramatic downward price moves. Confetti-like banknotes or subtle sparks emphasize {slice_summary} about short sellers winning, with charts integrated into walls or windows rather than dominating the frame.",
+    "SHORT_LOSE_SCENE": "The same kind of trading hall but now tense and chaotic: worried faces, screens or wall charts with sudden spikes upward, papers flying. The scene should capture {slice_summary} about short sellers losing, focusing on mood rather than readable UI.",
+    "TIMING_CLOCK_SCENE": "A large elegant clock face overlaid on a stylized financial chart, with the hands pointing to a critical moment where the line bends or breaks. The design should merge clock and graph into one metaphor to show {slice_summary} about timing.",
+    "ROCKET_STOCK_SCENE": "Painting of a rocket launching from a landscape where the exhaust plume subtly forms an upward price curve. The rocket body can carry a simple generic emblem related to the company or investor in {slice_summary}, but without any real logos or readable names.",
+    "QUALITY_APPS_SCENE": "Night-time city street with a large digital billboard or storefront window showing stylized, generic app or company icons glowing warmly. People walk past looking interested rather than frantic, visually summarizing {slice_summary} about quality companies.",
+
+    "MACRO_GOLD_SCENE": "Macro oil‑painted close‑up of stacked gold bars and old coins on dark velvet, engraved details catching warm light. This still life embodies {slice_summary} with no people present.",
+    "MACRO_COINS_SCENE": "Mixed historical and modern coins scattered across an aged wooden surface, some upright, some stacked, shallow depth of field. Their arrangement should echo {slice_summary}.",
+    "PAPER_MONEY_SCENE": "Loose banknotes from different eras fanned out around a central object like a scale, hourglass, or burning candle. Painterly motion and lighting express {slice_summary}.",
+    "DEBT_METAPHOR_SCENE": "Symbolic setup: heavy iron weights or chains attached to ledgers, bonds, or a balance scale tipping downward. Dim, moody lighting shows the pressure of {slice_summary} without readable text.",
+    "TAX_CHEST_SCENE": "Solid wooden chest marked with a simple emblem for state revenue, surrounded by assorted coins and stamped documents. The environment—palace office or town hall—quietly illustrates {slice_summary}.",
+    "INFLATION_SCENE": "Shelves or market stalls where price tags grow larger while goods seem to shrink, with a faint rising line graph in the background. Warm, restless colors show the feeling of {slice_summary}.",
+    "DEFLATION_SCENE": "Cool‑toned shop or warehouse with excess unsold goods, small falling arrows or ghosted numbers in the air, empty customers. The emptiness reflects {slice_summary}.",
+
+    "BANKING_HISTORY_SCENE": "Historic bank interior with tall columns, teller windows, metal vault door partly visible, people in period clothing lining up. The staging explains {slice_summary}.",
+    "BANKING_MODERN_SCENE": "Modern central bank atrium or press room, flags or discreet emblems, large abstract chart shapes on walls, cameras and microphones. The focus is on the atmosphere of policy decisions around {slice_summary}.",
+    "BANK_RUN_SCENE": "Street outside a bank where a diverse crowd queues anxiously, some holding papers or passbooks. The bank facade and mood tell the story of {slice_summary}.",
+
+    "PANIC_FLOOR_SCENE": "Overhead or wide view of a chaotic trading floor: scattered papers, traders gesturing, big abstract red graphs falling on wall panels. Use dynamic angles to show {slice_summary}.",
+    "MARKET_EUPHORIA_SCENE": "Bright trading room or celebration scene with people cheering, confetti‑like tickers in the air, glowing green line graphs rising in the background. This energy mirrors {slice_summary}.",
+    "RETAIL_HOLDING_SCENE": "A modern living room or small home office where one or two ordinary people stare at a chart or portfolio summary that shows red stock lines falling. The chart might be on a laptop, phone, wall screen or printed page pinned to a board, but it should not be framed like a product shot; their posture and the environment should silently explain {slice_summary}, with no readable text on the screens and no broker logos.",
+    "INSIDERS_VS_ORDINARY_SCENE": "Split or layered composition: in the background, confident insiders or executives in a boardroom or high-rise office quietly selling or discussing profits; in the foreground, ordinary people at home or on a city street looking worried as markets fall. The contrast should visually tell {slice_summary} without any labels or on-screen words.",
+    "YIELD_CHALKBOARD_SCENE": "Close shot of a simple chalkboard or glass wall with only a few curved lines or arrows, no words, lit dramatically. A hand or silhouette may gesture toward the curve to illustrate {slice_summary}.",
+    "HEDGE_FUND_SCENE": "Quiet, expensive office at night: skyline through glass, multiple monitors with abstract data, a single figure in modern clothing studying charts. The mood captures {slice_summary} about hedge funds or short sellers.",
+
+    "EMPIRE_MAP_SCENE": "Hand-painted historical map showing the relevant empire's territory shaded in a distinct color, with borders, trade routes and key cities marked by small icons or standards. The scene should make {slice_summary} clear through the extent of control, with no modern UI overlays. There should be no modern screens, tablets or digital UI.",
+    "BATTLEFIELD_SCENE": "Wide battlefield scene under a hazy sky, with opposing armies, cavalry or infantry lines, cannon smoke and torn banners. The uniforms and weapons should roughly match the era implied by {slice_summary}, but there should be no modern vehicles or logos. There should be no modern screens, tablets or digital UI.",
+    "MILITARY_DEPLOYMENT_SCENE": "Dramatic scene of multiple fighter jets or bombers cutting across the sky over a coastline or city, with faint translucent radar sweeps or simple line graphs in the clouds. The composition should convey {slice_summary} about rapid military deployment and power projection.",
+    "INFO_NETWORK_SCENE": "Abstract network of glowing nodes and connecting lines stretching over a painted landscape or globe, with a bright pulse spreading outward from one origin point. This symbolizes {slice_summary} about information traveling quickly or networks expanding.",
+    "HOLY_CITIES_SCENE": "Respectful golden-hour view of historic holy cities: domes, minarets or church towers, crowded courtyards and pilgrims moving through plazas. The architecture and atmosphere should gently express {slice_summary} without any caricature or explicit religious symbols dominating the frame. There should be no modern screens, tablets or digital UI.",
+    "CURRENCY_EXCHANGE_SCENE": "Close oil-painted view of two hands in formal sleeves exchanging different coins or banknotes, with extra coins and small currency symbols floating around them. This still life explains {slice_summary} about currency strength and exchange without any readable text.",
+    "BIG_VALUATION_SCENE": "Symbolic financial scene where giant stacks of coins and abstract bars or towers rise high above a city or company skyline, lit in a way that feels celebratory yet serious. Subtle numeric hints or small glowing digits can allude to {slice_summary} without large readable text.",
+    "TAX_MAP_SCENE": "Painted map of the United States with just a few key states highlighted and arrows showing wealth or people moving from high-tax regions to low-tax ones. Dollar icons and subtle courthouse silhouettes help visualize {slice_summary} about tax-motivated moves.",
+    "MILITARY_GLOBAL_MAP_SCENE": "World map seen from slightly above with multiple small military base icons, flags or silhouettes scattered across oceans and continents, connected by faint lines. The layout should make {slice_summary} about a global military footprint obvious at a glance.",
+    "GEOPOLITICS_STAGE_SCENE": "Grand exterior of embassies or government buildings with overlapping flags, maps and currency symbols subtly worked into the architecture. The layout reflects {slice_summary}.",
+    "BRICS_SCENE": "Painterly composition of landmarks, silhouettes, and coins representing BRICS countries arranged around a central globe or balance scale. The setup tells {slice_summary}.",
+    "DEDOLLAR_SCENE": "Symbolic scene where a large, slightly worn US dollar symbol tilts or sinks while other currency icons or coins rise behind it. Atmospheric lighting expresses {slice_summary}.",
+
+    "CRYPTO_SCENE": "Abstract mining rigs, cables, and glowing coin symbols like Bitcoin arranged in a dark workshop or server room. Light rays and reflections embody {slice_summary} without readable code.",
+    "CBDC_SCENE": "Government mint or digital ledger hall where physical coins blur into luminous digital tokens along a central pathway. The space represents {slice_summary}.",
+
+    "HOUSING_SCENE": "Suburban street or city block with multiple houses, some with for‑sale and foreclosure signs, moving trucks, or construction cranes. Weather and lighting underscore {slice_summary}, especially around housing crises or subprime events.",
+    "FOOD_PRICE_SCENE": "Indoor grocery aisle or outdoor market stall where baskets of food are contrasted with sparse coins in customers' hands, hinting at {slice_summary} about rising food costs.",
+    "LABOR_SCENE": "Factory gate, office lobby, or modern warehouse with workers entering, leaving, or gathering to talk. Posters or notice boards are present but not legible, and the body language reflects {slice_summary}.",
+    "PENSION_SCENE": "Warm interior with an older couple reviewing simple charts and coin stacks on a kitchen table, or a quiet government office with pension folders. The serenity or worry in the scene shows {slice_summary}.",
+    "STUDENT_DEBT_SCENE": "Young graduate in cap and gown or casual clothes sits among scattered diplomas and fee receipts, with city skyline or campus behind. Stacks of coins or balance scales hint at {slice_summary}.",
+    "INEQUALITY_SCENE": "Split‑screen style painterly scene: one side a luxurious high‑rise and gala, the other cramped housing or crowded street. The contrast wordlessly illustrates {slice_summary}.",
+    "BILLIONAIRE_SCENE": "A stylized group of powerful billionaires in tailored suits standing or seated together, with subtle symbols of money, charts, and global influence around them. The composition should tell {slice_summary} using posture, props, and lighting, with no readable text and no attempt to replicate real faces exactly.",
+    "CORP_CONTROL_SCENE": "A dramatic scene showing a giant corporate headquarters or glowing abstract logos looming over a city or crowd, with fine red or gold threads subtly connecting buildings, screens, and people. The layout should visually explain {slice_summary} without any labels or on-screen words.",
+
+    "OIL_SCENE": "Oil fields, pumpjacks, tankers, or pipelines under dramatic sky, with subtle suggestion of price movement through color and motion. The landscape reflects {slice_summary}.",
+    "TRADE_SCENE": "Container port with cranes and stacked shipping containers, or a busy customs checkpoint with trucks and trains. The flow of goods symbolizes {slice_summary}.",
+
+    "EXEC_ORDER_SCENE": "Close view of a wooden desk in a government office with a single important document being signed, seal and pen prominent but the text itself unreadable. The composition centers on {slice_summary}.",
+    "TREATY_SCENE": "Long conference table with multiple country nameplates and flags, delegates seen in silhouette or from behind as they exchange documents. The atmosphere conveys {slice_summary}.",
+    "IMF_SCENE": "International conference room with circular seating, translation booths, and a large world map or emblem. Delegates discuss documents that hint at {slice_summary} without showing words.",
+
+    "PROTEST_SCENE": "Street filled with protesters holding simple, mostly blank or symbol‑based placards, flares or smoke in the distance, strong perspective lines. The crowd’s motion expresses {slice_summary}.",
+    "TIMELINE_SCENE": "Conceptual scene where a winding road, river, or row of buildings passes through several eras of architecture or technology from left to right, subtly marking the passage of time to explain {slice_summary}.",
+
+    "GENERIC_SCENE": "A varied, story‑driven economic or political scene that chooses an appropriate setting—office, cityscape, market, parliament, or symbolic still life—to best visualize {slice_summary}. Avoid repeating previous compositions in the same job; look for a fresh angle or camera distance each time."
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "__comments": {
+    "purpose": "This file defines the DEFAULT prompt-style structure for any new channel. setup_folders.py copies this file into Channels/<Channel>/Config/prompt_style.json when a new channel is initialized.",
+    "instructions": "AI tools may read this file to understand the schema and expected fields. Do NOT remove keys; instead update per-channel prompt_style.json or channel_policy.py for customization.",
+    "global": {
+      "prompt_prefix": "Optional text automatically prepended to every scene prompt. Leave empty for LLM-driven prompts.",
+      "prompt_suffix": "Optional text automatically appended to every scene prompt. Leave empty unless needed for a channel.",
+      "negative_prompt": "A comma-separated list of forbidden visual elements. Global defaults are minimal; channels can extend this in their prompt_style.json."
+    },
+    "style": {
+      "art_style": "High-level aesthetic of the channel (cinematic, painterly, documentary). AI tools should fill this based on channel identity.",
+      "tone": "Emotional tone of visuals (serious, dramatic, neutral).",
+      "people_style": "How people should look in visuals (stylized, realistic, historical).",
+      "palette": "Preferred color palette for the channel (muted, warm, cold).",
+      "camera": "Preferred framing: wide, medium tableaus, close-ups."
+    },
+    "llm": {
+      "channel_theme": "List of high-level themes (finance, history, tech). Guides LLM scene writing.",
+      "target_audience": "Description of typical audience; helps LLM pick tone.",
+      "avoid": "List of elements that LLM should avoid when generating prompts.",
+      "style_notes": "Free-form hints that influence LLM style decisions for all scenes."
+    },
+    "rules": "Reserved for future rule-based prompt transformations.",
+    "fallback_template": "Name of a template used when LLM is unavailable.",
+    "templates": "Map of fallback templates. LLM-powered systems rarely need these, but they must exist for safety."
+  },
+
+  "global": {
+    "prompt_prefix": "",
+    "prompt_suffix": "",
+    "negative_prompt": "text, words, letters, captions, subtitles, logos, UI, infographics"
+  },
+
+  "style": {
+    "art_style": "",
+    "tone": "",
+    "people_style": "",
+    "palette": "",
+    "camera": ""
+  },
+
+  "rules": [],
+
+  "fallback_template": "GENERIC_SCENE",
+
+  "templates": {
+    "GENERIC_SCENE": "{core_idea}"
+  },
+
+  "llm": {
+    "channel_theme": [],
+    "target_audience": "",
+    "avoid": [],
+    "style_notes": []
+  }
+}

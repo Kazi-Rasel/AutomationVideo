@@ -1,0 +1,63 @@
+{
+  "tts_engine": "gemini",
+  "image_engine": "google",
+  "video_engine": "ffmpeg",
+  "import_engine": "resolve",
+  "scheduler": "0-240:5,240-480:7,540-inf:9",
+  "scene_options": {
+    "min_sec": 4.0,
+    "target_sec": 5.5,
+    "max_sec": 9.0
+  },
+  "subtitles": {
+    "align_audio": true,
+    "max_chars_per_line": 42,
+    "style": "System/SysVisuals/Config/subtitle_style.json",
+    "denormalize": {
+      "dates": true,
+      "years": true,
+      "codes": true
+    }
+  },
+  "video_options": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 30,
+    "zoom_out_start": 1.06,
+    "zoom_out_end": 1.0,
+    "pan_mode": "alternate",
+    "transition": "crossfade",
+    "transition_ms": 350,
+    "lut3d": "System/SysVisuals/Config/looks/CineNeutral-Soft.cube",
+    "lut_mix": 0.45,
+    "grain": 0.12,
+    "vignette": 0.08,
+    "sharpen": 0.05
+  },
+  "image_options": {
+    "reuse": true,
+    "reuse_topk": 5,
+    "use_clip": true,
+    "reuse_min_clip": 0.78,
+    "job_diversity_phash": 6,
+    "library_diversity_phash": 4,
+    "max_retries": 1,
+    "store_all_pass_min": true,
+    "size": "landscape_4_3",
+    "bright_target": 0.62
+  },
+  "engine_options": {
+    "google": {
+      "style": "cinematic",
+      "safety": "standard"
+    },
+    "fal": {
+      "cfg": 4.8,
+      "brightness_tolerance": 0.06
+    }
+  },
+  "debug": {
+    "save_prompts": true,
+    "print_segments": true
+  }
+}

@@ -1,0 +1,644 @@
+{
+  "version": 2,
+  "channel": "CapitalChronicles",
+  "description": "Extremely robust, natural visual style hints for recurring entities in CapitalChronicles. Used by planners to keep empires, countries, regions, asset classes, institutions and actors visually consistent across episodes, without forcing exact likenesses.",
+  "entities": {
+    "roman_empire": {
+      "display_name": "Roman Empire",
+      "role": "empire",
+      "palette": ["warm_stone", "gold", "deep_red"],
+      "architecture": ["marble_columns", "arches", "forums"],
+      "symbols": ["eagle_standard", "laurel_wreath"],
+      "environments": ["ancient_city", "hilltop_fortress"],
+      "avoid": ["modern_screens", "glass_skyscrapers"]
+    },
+    "ottoman_empire": {
+      "display_name": "Ottoman Empire",
+      "role": "empire",
+      "palette": ["warm_earth", "turquoise", "deep_green"],
+      "architecture": ["domes", "minarets", "palaces"],
+      "symbols": ["crescent_moon", "calligraphy_panels"],
+      "environments": ["historic_city", "courtyard"],
+      "avoid": ["western_boardrooms", "modern_trading_floors"]
+    },
+    "british_empire": {
+      "display_name": "British Empire",
+      "role": "empire",
+      "palette": ["muted_red", "navy_blue", "stone_grey"],
+      "architecture": ["parliament_buildings", "clock_towers", "harbors"],
+      "symbols": ["union_flag_motif", "naval_icons"],
+      "environments": ["imperial_port", "colonial_office"],
+      "avoid": ["tropical_cityscapes_without_ports"]
+    },
+    "soviet_union": {
+      "display_name": "Soviet Union",
+      "role": "empire",
+      "palette": ["deep_red", "concrete_grey", "cold_blue"],
+      "architecture": ["kremlin_silhouette", "brutalist_blocks"],
+      "symbols": ["star_shape", "industrial_motifs"],
+      "environments": ["cold_capital_city", "industrial_complex"],
+      "avoid": ["slick_modern_glass_offices"]
+    },
+    "united_states": {
+      "display_name": "United States",
+      "role": "country",
+      "palette": ["navy_blue", "off_white", "muted_red"],
+      "architecture": ["capital_dome", "skyscrapers", "suburban_houses"],
+      "symbols": ["eagle_shape", "flag_silhouette"],
+      "environments": ["capital_city", "wall_street", "suburban_neighborhood"],
+      "avoid": ["ancient_stone_ruins"]
+    },
+    "western_europe": {
+      "display_name": "Western Europe",
+      "role": "region",
+      "palette": ["stone_grey", "slate_blue", "forest_green"],
+      "architecture": ["old_town_squares", "church_spires", "parliament_buildings"],
+      "symbols": ["euro_coin_motifs"],
+      "environments": ["historic_city_centers", "modern_financial_districts"],
+      "avoid": ["desert_landscapes"]
+    },
+    "china": {
+      "display_name": "China",
+      "role": "country",
+      "palette": ["deep_red", "gold", "mist_grey"],
+      "architecture": ["pagoda_roofs", "modern_towers"],
+      "symbols": ["dragon_motif", "red_banner"],
+      "environments": ["dense_urban_city", "industrial_port"],
+      "avoid": ["classical_european_architecture"]
+    },
+    "emerging_market": {
+      "display_name": "Emerging Market",
+      "role": "country_group",
+      "palette": ["warm_city_colors"],
+      "environments": ["busy_city_streets", "informal_markets"],
+      "symbols": ["buses", "street_stalls"],
+      "avoid": ["sterile_corporate_parks"]
+    },
+    "oil_state": {
+      "display_name": "Oil-Producing State",
+      "role": "country_group",
+      "palette": ["desert_tones", "dark_oil"],
+      "environments": ["oil_fields", "pipelines", "export_terminals"],
+      "symbols": ["oil_rig_silhouettes"],
+      "avoid": ["dense_rainforest"]
+    },
+    "global_south": {
+      "display_name": "Global South",
+      "role": "region",
+      "palette": ["sun_drenched", "earthy"],
+      "environments": ["developing_city", "rural_villages"],
+      "symbols": ["simple_market_scenes"],
+      "avoid": ["overly_slick_fintech_offices"]
+    },
+    "developed_markets": {
+      "display_name": "Developed Markets",
+      "role": "region",
+      "palette": ["cool_neutral", "glass_blue"],
+      "environments": ["financial_districts", "corporate_parks"],
+      "symbols": ["tall_office_blocks"],
+      "avoid": ["very_rural_backdrops"]
+    },
+
+    "gold": {
+      "display_name": "Gold",
+      "role": "asset_class",
+      "palette": ["rich_gold", "dark_brown"],
+      "objects": ["coins", "bars", "vault_doors"],
+      "symbols": ["weight_scales"],
+      "environments": ["vault_interior", "jewelers_workbench"],
+      "avoid": ["bright_plastic_colors"]
+    },
+    "bonds": {
+      "display_name": "Bonds",
+      "role": "asset_class",
+      "palette": ["paper_white", "ink_black", "muted_green"],
+      "objects": ["certificates", "paper_contracts"],
+      "symbols": ["interest_coupons"],
+      "environments": ["quiet_office", "archive_room"],
+      "avoid": ["flashy_neon_charts"]
+    },
+    "stocks": {
+      "display_name": "Stocks",
+      "role": "asset_class",
+      "palette": ["screen_blue", "chart_green", "chart_red"],
+      "objects": ["screens", "tickers", "order_books"],
+      "symbols": ["arrows_up_down"],
+      "environments": ["trading_floor", "brokerage_office"],
+      "avoid": ["ancient_parchment"]
+    },
+    "real_estate": {
+      "display_name": "Real Estate",
+      "role": "asset_class",
+      "palette": ["brick_red", "concrete_grey", "roof_tiles"],
+      "objects": ["house_fronts", "apartment_blocks"],
+      "symbols": ["for_sale_signs"],
+      "environments": ["suburban_street", "city_block"],
+      "avoid": ["server_rooms"]
+    },
+    "commodities": {
+      "display_name": "Commodities",
+      "role": "asset_class",
+      "palette": ["earth_tones", "metallics"],
+      "objects": ["grain_sacks", "metal_ingots", "oil_drums"],
+      "symbols": ["warehouse_pallets"],
+      "environments": ["warehouse", "port_terminal"],
+      "avoid": ["polished_boardrooms_only"]
+    },
+    "crypto_assets": {
+      "display_name": "Crypto Assets",
+      "role": "asset_class",
+      "palette": ["electric_blue", "neon_purple"],
+      "objects": ["stylized_coin_icons"],
+      "symbols": ["network_grid"],
+      "environments": ["abstract_digital_space"],
+      "avoid": ["ancient_stone_architecture"]
+    },
+
+    "retail_investor": {
+      "display_name": "Retail Investor",
+      "role": "actor",
+      "palette": ["neutral_home_tones"],
+      "environments": ["living_room", "small_home_office"],
+      "symbols": ["modest_laptop", "phone_with_app"],
+      "avoid": ["large_trading_floor", "lavish_boardrooms"]
+    },
+    "hedge_fund_manager": {
+      "display_name": "Hedge Fund Manager",
+      "role": "actor",
+      "palette": ["cool_blue", "steel_grey"],
+      "environments": ["glass_office", "trading_floor"],
+      "symbols": ["multiple_monitors", "conference_table"],
+      "avoid": ["crowded_supermarket", "suburban_kitchen"]
+    },
+    "pensioner": {
+      "display_name": "Retiree / Pensioner",
+      "role": "actor",
+      "palette": ["soft_neutrals"],
+      "environments": ["small_home", "park_bench"],
+      "symbols": ["pension_documents"],
+      "avoid": ["high_frequency_trading_room"]
+    },
+    "worker": {
+      "display_name": "Worker",
+      "role": "actor",
+      "palette": ["workwear_colors"],
+      "environments": ["factory_floor", "construction_site", "office_floor"],
+      "symbols": ["toolbox", "clipboard"],
+      "avoid": ["palace_interiors"]
+    },
+    "families_household": {
+      "display_name": "Household",
+      "role": "group",
+      "palette": ["warm_home_tones"],
+      "environments": ["kitchen_table", "grocery_aisle"],
+      "symbols": ["shopping_cart", "utility_bills"],
+      "avoid": ["formal_boardroom"]
+    },
+
+    "central_bank": {
+      "display_name": "Central Bank",
+      "role": "institution",
+      "palette": ["stone_grey", "deep_blue"],
+      "architecture": ["grand_office", "marble_lobby"],
+      "symbols": ["seal_motif", "press_podium"],
+      "environments": ["press_conference_room", "policy_meeting_room"],
+      "avoid": ["small_shop_interior"]
+    },
+    "commercial_bank": {
+      "display_name": "Commercial Bank",
+      "role": "institution",
+      "palette": ["blue_grey", "brushed_metal"],
+      "architecture": ["glass_branch", "marble_foyer"],
+      "symbols": ["vault_door", "bank_logo_shapes"],
+      "environments": ["branch_lobby", "regional_headquarters"],
+      "avoid": ["warehouse_floor"]
+    },
+    "global_institution": {
+      "display_name": "Global Institution",
+      "role": "institution",
+      "palette": ["white_stone", "soft_blue"],
+      "architecture": ["conference_headquarters"],
+      "symbols": ["round_emblem"],
+      "environments": ["international_conference_hall"],
+      "avoid": ["small_local_office"]
+    },
+    "big_tech": {
+      "display_name": "Big Tech Platforms",
+      "role": "company_group",
+      "palette": ["saturated_blue", "purple", "teal"],
+      "environments": ["modern_office", "data_center"],
+      "symbols": ["abstract_app_icons", "server_racks"],
+      "avoid": ["old_factory_floor"]
+    },
+
+    "energy_company": {
+      "display_name": "Energy Company",
+      "role": "company_group",
+      "palette": ["industrial_grey", "oil_black", "flare_orange"],
+      "environments": ["refinery_complex", "pipeline_right_of_way"],
+      "symbols": ["flaring_stack", "pipeline_runs"],
+      "avoid": ["minimalist_app_office"]
+    },
+    "shipping_conglomerate": {
+      "display_name": "Shipping Conglomerate",
+      "role": "company_group",
+      "palette": ["ocean_blue", "steel_grey"],
+      "environments": ["port_terminal", "container_ship_deck"],
+      "symbols": ["stacked_containers", "ship_silhouette"],
+      "avoid": ["landlocked_landscapes"]
+    }
+  }
+}
+
+{
+  "version": 3,
+  "channel": "CapitalChronicles",
+  "description": "Hyper-global, deeply structured visual style hints for recurring entities in CapitalChronicles. Designed to keep empires, countries, regions, asset classes, institutions and actors visually consistent, coherent and natural across thousands of long-form videos.",
+  "entities": {
+    "roman_empire": {
+      "display_name": "Roman Empire",
+      "role": "empire",
+      "family": "ancient_empires",
+      "palette": ["warm_stone", "gold", "deep_red"],
+      "architecture": ["marble_columns", "arches", "forums"],
+      "symbols": ["eagle_standard", "laurel_wreath"],
+      "environments": ["ancient_city", "hilltop_fortress"],
+      "avoid": ["modern_screens", "glass_skyscrapers"]
+    },
+    "ottoman_empire": {
+      "display_name": "Ottoman Empire",
+      "role": "empire",
+      "family": "ancient_empires",
+      "palette": ["warm_earth", "turquoise", "deep_green"],
+      "architecture": ["domes", "minarets", "palaces"],
+      "symbols": ["crescent_moon", "calligraphy_panels"],
+      "environments": ["historic_city", "courtyard"],
+      "avoid": ["western_boardrooms", "modern_trading_floors"]
+    },
+    "british_empire": {
+      "display_name": "British Empire",
+      "role": "empire",
+      "family": "colonial_empires",
+      "palette": ["muted_red", "navy_blue", "stone_grey"],
+      "architecture": ["parliament_buildings", "clock_towers", "harbors"],
+      "symbols": ["union_flag_motif", "naval_icons"],
+      "environments": ["imperial_port", "colonial_office"],
+      "avoid": ["tropical_cityscapes_without_ports"]
+    },
+    "soviet_union": {
+      "display_name": "Soviet Union",
+      "role": "empire",
+      "family": "20th_century_empires",
+      "palette": ["deep_red", "concrete_grey", "cold_blue"],
+      "architecture": ["kremlin_silhouette", "brutalist_blocks"],
+      "symbols": ["star_shape", "industrial_motifs"],
+      "environments": ["cold_capital_city", "industrial_complex"],
+      "avoid": ["slick_modern_glass_offices"]
+    },
+    "united_states": {
+      "display_name": "United States",
+      "role": "country",
+      "family": "modern_superpowers",
+      "palette": ["navy_blue", "off_white", "muted_red"],
+      "architecture": ["capital_dome", "skyscrapers", "suburban_houses"],
+      "symbols": ["eagle_shape", "flag_silhouette"],
+      "environments": ["capital_city", "wall_street", "suburban_neighborhood"],
+      "avoid": ["ancient_stone_ruins"]
+    },
+    "western_europe": {
+      "display_name": "Western Europe",
+      "role": "region",
+      "family": "developed_markets",
+      "palette": ["stone_grey", "slate_blue", "forest_green"],
+      "architecture": ["old_town_squares", "church_spires", "parliament_buildings"],
+      "symbols": ["euro_coin_motifs"],
+      "environments": ["historic_city_centers", "modern_financial_districts"],
+      "avoid": ["desert_landscapes"]
+    },
+    "china": {
+      "display_name": "China",
+      "role": "country",
+      "family": "modern_superpowers",
+      "palette": ["deep_red", "gold", "mist_grey"],
+      "architecture": ["pagoda_roofs", "modern_towers"],
+      "symbols": ["dragon_motif", "red_banner"],
+      "environments": ["dense_urban_city", "industrial_port"],
+      "avoid": ["classical_european_architecture"]
+    },
+    "global_south": {
+      "display_name": "Global South",
+      "role": "region",
+      "family": "emerging_regions",
+      "palette": ["sun_drenched", "earthy"],
+      "environments": ["developing_city", "rural_villages"],
+      "symbols": ["simple_market_scenes"],
+      "avoid": ["overly_slick_fintech_offices"]
+    },
+    "emerging_market": {
+      "display_name": "Emerging Market",
+      "role": "country_group",
+      "family": "emerging_regions",
+      "palette": ["warm_city_colors"],
+      "environments": ["busy_city_streets", "informal_markets"],
+      "symbols": ["buses", "street_stalls"],
+      "avoid": ["sterile_corporate_parks"]
+    },
+    "oil_state": {
+      "display_name": "Oil-Producing State",
+      "role": "country_group",
+      "family": "commodity_producers",
+      "palette": ["desert_tones", "dark_oil"],
+      "environments": ["oil_fields", "pipelines", "export_terminals"],
+      "symbols": ["oil_rig_silhouettes"],
+      "avoid": ["dense_rainforest"]
+    },
+    "developed_markets": {
+      "display_name": "Developed Markets",
+      "role": "region",
+      "family": "developed_markets",
+      "palette": ["cool_neutral", "glass_blue"],
+      "environments": ["financial_districts", "corporate_parks"],
+      "symbols": ["tall_office_blocks"],
+      "avoid": ["very_rural_backdrops"]
+    },
+
+    "gold": {
+      "display_name": "Gold",
+      "role": "asset_class",
+      "family": "safe_haven_assets",
+      "palette": ["rich_gold", "dark_brown"],
+      "objects": ["coins", "bars", "vault_doors"],
+      "symbols": ["weight_scales"],
+      "environments": ["vault_interior", "jewelers_workbench"],
+      "avoid": ["bright_plastic_colors"]
+    },
+    "bonds": {
+      "display_name": "Bonds",
+      "role": "asset_class",
+      "family": "fixed_income",
+      "palette": ["paper_white", "ink_black", "muted_green"],
+      "objects": ["certificates", "paper_contracts"],
+      "symbols": ["interest_coupons"],
+      "environments": ["quiet_office", "archive_room"],
+      "avoid": ["flashy_neon_charts"]
+    },
+    "stocks": {
+      "display_name": "Stocks",
+      "role": "asset_class",
+      "family": "equity_assets",
+      "palette": ["screen_blue", "chart_green", "chart_red"],
+      "objects": ["screens", "tickers", "order_books"],
+      "symbols": ["arrows_up_down"],
+      "environments": ["trading_floor", "brokerage_office"],
+      "avoid": ["ancient_parchment"]
+    },
+    "real_estate": {
+      "display_name": "Real Estate",
+      "role": "asset_class",
+      "family": "real_assets",
+      "palette": ["brick_red", "concrete_grey", "roof_tiles"],
+      "objects": ["house_fronts", "apartment_blocks"],
+      "symbols": ["for_sale_signs"],
+      "environments": ["suburban_street", "city_block"],
+      "avoid": ["server_rooms"]
+    },
+    "commodities": {
+      "display_name": "Commodities",
+      "role": "asset_class",
+      "family": "real_assets",
+      "palette": ["earth_tones", "metallics"],
+      "objects": ["grain_sacks", "metal_ingots", "oil_drums"],
+      "symbols": ["warehouse_pallets"],
+      "environments": ["warehouse", "port_terminal"],
+      "avoid": ["polished_boardrooms_only"]
+    },
+    "crypto_assets": {
+      "display_name": "Crypto Assets",
+      "role": "asset_class",
+      "family": "digital_assets",
+      "palette": ["electric_blue", "neon_purple"],
+      "objects": ["stylized_coin_icons"],
+      "symbols": ["network_grid"],
+      "environments": ["abstract_digital_space"],
+      "avoid": ["ancient_stone_architecture"]
+    },
+
+    "retail_investor": {
+      "display_name": "Retail Investor",
+      "role": "actor",
+      "family": "households",
+      "palette": ["neutral_home_tones"],
+      "environments": ["living_room", "small_home_office"],
+      "symbols": ["modest_laptop", "phone_with_app"],
+      "avoid": ["large_trading_floor", "lavish_boardrooms"]
+    },
+    "hedge_fund_manager": {
+      "display_name": "Hedge Fund Manager",
+      "role": "actor",
+      "family": "professional_investors",
+      "palette": ["cool_blue", "steel_grey"],
+      "environments": ["glass_office", "trading_floor"],
+      "symbols": ["multiple_monitors", "conference_table"],
+      "avoid": ["crowded_supermarket", "suburban_kitchen"]
+    },
+    "pensioner": {
+      "display_name": "Retiree / Pensioner",
+      "role": "actor",
+      "family": "households",
+      "palette": ["soft_neutrals"],
+      "environments": ["small_home", "park_bench"],
+      "symbols": ["pension_documents"],
+      "avoid": ["high_frequency_trading_room"]
+    },
+    "worker": {
+      "display_name": "Worker",
+      "role": "actor",
+      "family": "labor_force",
+      "palette": ["workwear_colors"],
+      "environments": ["factory_floor", "construction_site", "office_floor"],
+      "symbols": ["toolbox", "clipboard"],
+      "avoid": ["palace_interiors"]
+    },
+    "families_household": {
+      "display_name": "Household",
+      "role": "group",
+      "family": "households",
+      "palette": ["warm_home_tones"],
+      "environments": ["kitchen_table", "grocery_aisle"],
+      "symbols": ["shopping_cart", "utility_bills"],
+      "avoid": ["formal_boardroom"]
+    },
+
+    "central_bank": {
+      "display_name": "Central Bank",
+      "role": "institution",
+      "family": "financial_institutions",
+      "palette": ["stone_grey", "deep_blue"],
+      "architecture": ["grand_office", "marble_lobby"],
+      "symbols": ["seal_motif", "press_podium"],
+      "environments": ["press_conference_room", "policy_meeting_room"],
+      "avoid": ["small_shop_interior"]
+    },
+    "commercial_bank": {
+      "display_name": "Commercial Bank",
+      "role": "institution",
+      "family": "financial_institutions",
+      "palette": ["blue_grey", "brushed_metal"],
+      "architecture": ["glass_branch", "marble_foyer"],
+      "symbols": ["vault_door", "bank_logo_shapes"],
+      "environments": ["branch_lobby", "regional_headquarters"],
+      "avoid": ["warehouse_floor"]
+    },
+    "global_institution": {
+      "display_name": "Global Institution",
+      "role": "institution",
+      "family": "global_institutions",
+      "palette": ["white_stone", "soft_blue"],
+      "architecture": ["conference_headquarters"],
+      "symbols": ["round_emblem"],
+      "environments": ["international_conference_hall"],
+      "avoid": ["small_local_office"]
+    },
+    "big_tech": {
+      "display_name": "Big Tech Platforms",
+      "role": "company_group",
+      "family": "tech_giants",
+      "palette": ["saturated_blue", "purple", "teal"],
+      "environments": ["modern_office", "data_center"],
+      "symbols": ["abstract_app_icons", "server_racks"],
+      "avoid": ["old_factory_floor"]
+    },
+
+    "energy_company": {
+      "display_name": "Energy Company",
+      "role": "company_group",
+      "family": "energy_giants",
+      "palette": ["industrial_grey", "oil_black", "flare_orange"],
+      "environments": ["refinery_complex", "pipeline_right_of_way"],
+      "symbols": ["flaring_stack", "pipeline_runs"],
+      "avoid": ["minimalist_app_office"]
+    },
+    "shipping_conglomerate": {
+      "display_name": "Shipping Conglomerate",
+      "role": "company_group",
+      "family": "shipping_giants",
+      "palette": ["ocean_blue", "steel_grey"],
+      "environments": ["port_terminal", "container_ship_deck"],
+      "symbols": ["stacked_containers", "ship_silhouette"],
+      "avoid": ["landlocked_landscapes"]
+    }
+  },
+  "families": {
+    "ancient_empires": ["roman_empire", "ottoman_empire"],
+    "colonial_empires": ["british_empire"],
+    "20th_century_empires": ["soviet_union"],
+    "modern_superpowers": ["united_states", "china"],
+    "developed_markets": ["western_europe", "developed_markets"],
+    "emerging_regions": ["global_south", "emerging_market"],
+    "commodity_producers": ["oil_state"],
+    "safe_haven_assets": ["gold"],
+    "fixed_income": ["bonds"],
+    "equity_assets": ["stocks"],
+    "real_assets": ["real_estate", "commodities"],
+    "digital_assets": ["crypto_assets"],
+    "households": ["retail_investor", "pensioner", "families_household"],
+    "professional_investors": ["hedge_fund_manager"],
+    "labor_force": ["worker"],
+    "financial_institutions": ["central_bank", "commercial_bank"],
+    "global_institutions": ["global_institution"],
+    "tech_giants": ["big_tech"],
+    "energy_giants": ["energy_company"],
+    "shipping_giants": ["shipping_conglomerate"]
+  },
+  "compatibility": {
+    "roman_empire": {
+      "compatible_with": ["ottoman_empire", "british_empire"],
+      "incompatible_with": ["crypto_assets", "big_tech"]
+    },
+    "soviet_union": {
+      "compatible_with": ["united_states", "western_europe"],
+      "incompatible_with": ["crypto_assets"]
+    },
+    "united_states": {
+      "compatible_with": ["stocks", "big_tech", "central_bank", "western_europe"],
+      "incompatible_with": ["ancient_empires"]
+    },
+    "china": {
+      "compatible_with": ["emerging_market", "commodities", "shipping_conglomerate"],
+      "incompatible_with": ["ancient_empires"]
+    },
+    "gold": {
+      "compatible_with": ["bonds", "safe_haven_assets"],
+      "incompatible_with": ["crypto_assets"]
+    },
+    "crypto_assets": {
+      "compatible_with": ["big_tech"],
+      "incompatible_with": ["ancient_empires", "gold"]
+    }
+  },
+  "narrative_behaviour": {
+    "roman_empire": {
+      "rise_phase": ["capital_city"],
+      "peak_phase": ["empire_map"],
+      "decline_phase": ["territory_chipping"],
+      "collapse_phase": ["front_line"]
+    },
+    "british_empire": {
+      "rise_phase": ["imperial_port"],
+      "peak_phase": ["empire_map"],
+      "decline_phase": ["territory_chipping"],
+      "collapse_phase": ["war_map"]
+    },
+    "soviet_union": {
+      "rise_phase": ["industrial_complex"],
+      "peak_phase": ["military_map"],
+      "decline_phase": ["crisis_timeline"],
+      "collapse_phase": ["front_line"]
+    },
+    "united_states": {
+      "rise_phase": ["capital_city"],
+      "peak_phase": ["macro_dashboard"],
+      "decline_phase": ["crisis_timeline"],
+      "collapse_phase": ["recession_city"]
+    },
+    "gold": {
+      "rise_phase": ["store_of_value"],
+      "peak_phase": ["vault"],
+      "decline_phase": ["portfolio_rotation"]
+    },
+    "stocks": {
+      "rise_phase": ["smooth_line"],
+      "peak_phase": ["rocket"],
+      "decline_phase": ["candles"],
+      "collapse_phase": ["crisis_timeline"]
+    }
+  },
+  "scene_preferences": {
+    "roman_empire": ["empire_map", "empire_capital", "battlefield"],
+    "ottoman_empire": ["empire_capital", "empire_map", "holy_cities"],
+    "british_empire": ["empire_capital", "empire_map", "war_map"],
+    "soviet_union": ["empire_capital", "war_map", "battlefield"],
+    "united_states": ["macro_dashboard", "stock_chart", "trading_hall", "tax_map"],
+    "china": ["factory_floor", "shipping_lanes", "global_institutions"],
+    "western_europe": ["empire_capital", "global_institutions"],
+    "global_south": ["street_level", "housing_market"],
+    "emerging_market": ["street_level", "job_market"],
+    "oil_state": ["energy_infrastructure", "commodities_floor"],
+    "gold": ["gold_allocation", "vault_interior"],
+    "bonds": ["bond_market", "credit_machine"],
+    "stocks": ["stock_chart", "trading_hall"],
+    "real_estate": ["housing_market", "street_level"],
+    "commodities": ["commodities_floor", "shipping_lanes"],
+    "crypto_assets": ["info_network", "macro_dashboard"],
+    "central_bank": ["macro_dashboard", "global_institutions"],
+    "commercial_bank": ["bank_boardroom", "bank_run"],
+    "big_tech": ["tech_platforms", "data_center", "ai_brain"],
+    "energy_company": ["energy_infrastructure", "commodities_floor"],
+    "shipping_conglomerate": ["shipping_lanes", "supply_chain_network"],
+    "retail_investor": ["retail_holding", "household"],
+    "hedge_fund_manager": ["trading_hall", "bank_boardroom"],
+    "pensioner": ["pensioners", "household"],
+    "worker": ["job_market", "factory_floor"],
+    "families_household": ["household", "street_level"]
+  }
+}

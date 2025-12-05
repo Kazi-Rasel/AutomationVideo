@@ -1,0 +1,21 @@
+{
+  "font_family": "Montserrat",
+  "font_weight": "SemiBold",
+  "font_size_px": 40,
+  "max_lines": 2,
+  "line_length_chars": 42,
+  "color_base": "#FFFFFF",
+  "color_accent": "#FFD34D",
+  "shadow_color": "rgba(0,0,0,0.6)",
+  "shadow_blur": 4,
+  "shadow_offset": 2,
+  "backplate": {
+    "enabled": true,
+    "color": "rgba(0,0,0,0.34)",
+    "padding_px": 14,
+    "radius_px": 12
+  },
+  "fade_ms": 150,
+  "position": "bottom_center",
+  "margin_bottom_px": 96
+}
